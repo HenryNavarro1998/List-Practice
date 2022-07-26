@@ -25,7 +25,11 @@ int main()
     l.push("pro5",25);
     l.push("pro6",20);
 
-    l.print();
+    while(!l.empty())
+    {
+        l.countTime();
+        l.print();
+    }
 
     return 0;
 }

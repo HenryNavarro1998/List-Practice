@@ -22,14 +22,16 @@ class List
     private:
         Node *first, *last;
         int length;
+        int completed;
 
     public:
-        List(): first(NULL), last(NULL), length(0){};
+        List(): first(NULL), last(NULL), length(0), completed(0){};
         ~List();
 
-        bool empty() const { return first != NULL; };
+        bool empty() const { return first == NULL; };
         bool push(const string, const int);
-
+        bool pop();
+        void countTime();
         void print() const;
 };
 
