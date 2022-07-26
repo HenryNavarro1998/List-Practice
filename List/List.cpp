@@ -1,16 +1,5 @@
 #include "List.hpp"
 
-List::~List()
-{
-    Node* i = first;
-    while(i)
-    {
-        Node* aux = i;
-        i = i->next;
-        delete aux;
-    }
-}
-
 bool List::push(const string name, int time)
 {
     Node* node = new Node(name,time);
@@ -46,6 +35,7 @@ bool List::pop()
     Node* aux = first;
 
     first = first->next;
+    cout << "Eliminado: " << aux->name << endl;
     delete aux;
 
     length--;
@@ -55,7 +45,6 @@ bool List::pop()
 void List::countTime()
 {
     first->time--;
-
     if(first->time == 0)
         pop();
 }

@@ -26,7 +26,7 @@ class List
 
     public:
         List(): first(NULL), last(NULL), length(0), completed(0){};
-        ~List();
+        ~List() { while(pop()); };
 
         bool empty() const { return first == NULL; };
         bool push(const string, const int);
