@@ -1,0 +1,10 @@
+pro1 25
+pro2 15
+pro3 45
+pro4 60
+pro5 20
+pro6 30
+pro7 35
+pro8 5
+pro9 10
+pro10 45

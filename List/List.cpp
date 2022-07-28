@@ -35,7 +35,6 @@ bool List::pop()
     Node* aux = first;
 
     first = first->next;
-    cout << "Eliminado: " << aux->name << endl;
     delete aux;
 
     length--;

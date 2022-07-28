@@ -9,27 +9,37 @@
 // Librerias Incluidas
 #include <iostream>
 #include <cstdlib>
+#include <fstream>
 #include "List/List.hpp"
 
 using namespace std;
+
+void readFile(List&);
 
 // Funcion Main
 int main()
 {
     List l;
+    readFile(l);
 
-    l.push("pro1",10);
-    l.push("pro2",15);
-    l.push("pro3",12);
-    l.push("pro4",18);
-    l.push("pro5",25);
-    l.push("pro6",20);
-
-    while(!l.empty())
-    {
-        l.countTime();
-        l.print();
-    }
+    l.print();
 
     return 0;
 }
+
+void readFile(List& l)
+{
+    ifstream file;
+    string name;
+    int time;
+
+    file.open("doc.txt");
+    while(!file.eof())
+    {
+        file >> name;
+        file >> time;
+        l.push(name,time);
+    }
+    file.close();
+}
+
