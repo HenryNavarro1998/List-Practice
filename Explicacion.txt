@@ -1,0 +1,6 @@
+La estructura implementada en esta practica fue una "Lista Delta",
+debido a su eficiente manera de administrar los tiempos para los procesos.
+
+Gracias a su insercion, ordenada y de clave relativa, no se itera sobre cada
+elemento al momento de realizar la actualizacion del reloj. Arrojando asi,
+un algoritmo eficiente para la Practica en cuestion. 
